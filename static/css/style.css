@@ -1,0 +1,420 @@
+/* ベーススタイル */
+body {
+    font-family: 'Arial', YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ ゴシック', sans-serif;
+    color: #927D67;
+    background-color: #FFF5EC;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    /* padding: 1px 8px; */
+    border: 1px solid #9B8774;
+    border-radius: 4px;
+}
+/* --------------------------------------- */
+
+
+
+/* ヘッダー */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    padding: 0 10%;
+    background-color: #FFBB7C;
+}
+
+.app-title{
+    color: #FFF5EC;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+.menu-link,.btn-secondary{
+    font-size: 18px;
+    color: #FFF5EC;
+    font-weight: bold;
+} 
+
+.Fixed{
+    height: 70px;
+    width: 374px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+}
+
+/* フォーム */
+.name-required{
+    font-size: 20px;
+    padding:35px 30px 25px;
+}
+
+/* 変更② */
+.input{
+    width: 170px;
+    height: 40px;
+    margin:20px 0px;
+    padding: 1px 8px;
+    background-color:#fff3e5 ;
+}
+/* ------------------ */
+
+.password-required{
+    font-size: 20px;
+    padding:10px 30px 25px 30px;
+}
+
+.name-input{
+    width: 170px;
+    height: 40px;
+    margin:30px 0px 0px 0px;
+    padding: 1px 8px;
+}
+.password-input{
+    width: 170px;
+    height: 40px;
+    /* margin:5px 0px 20px 0px; */
+    padding: 20px 8px;
+}
+
+.show_app{
+    width: 375px;
+    height: 205px;
+    background-color: #F4E2D3;
+    margin: 20px 0px 20px 0px;
+    padding: 15px;
+    border-radius:5%;
+}
+
+.sub_title{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.sub_title-secondary{
+    font-size: 28px;
+    text-align: center;
+    margin-top: 5px;
+    /* letter-spacing: 7px; */
+}
+
+
+
+subtitle{
+    color: #fca350;
+}
+
+
+
+.concept{
+    font-size: 20px;
+    margin: 15px 0px 30px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.concept-regist{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0px 30px;
+    text-align: center;
+}
+
+
+.input-item{
+    display: flex;
+}
+
+/* リストページ */
+.btn-choice{
+    font-size: 20px;
+    height: 20px;
+    color: #9B8774;
+    padding: 10px 10px 0px 10px;
+}
+
+.choice{
+    margin-top: 10px;
+}
+
+.chrono{
+    border-bottom:3px solid #9B8774;
+}
+
+.good{
+    border-bottom:3px solid #9B8774;
+}
+
+
+.page-head{
+    font-size: 20px;
+    color: #9B8774;
+    margin: 15px 0;
+}
+
+.card-wrap{
+    /* border-top: 100% solid #C99A6F; */
+    width: 100%;
+}
+
+/* いいね最多枠 */
+.card-wrap.good-top{
+    background-color: rgb(243, 215, 200);
+    border-bottom:1px #94571e;
+    border-style: dotted; 
+    margin-bottom: 10px;
+}
+
+p.word{
+    display: block;
+    margin: 10px 0;
+}
+
+.card{
+    padding: 15px 10px;
+    border-bottom:1px solid #94571e37;
+}
+
+.icon-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
+.heart-wrap{
+    display: flex;
+    align-items: center;
+}
+
+
+/* 変更① */
+span-heart{
+    color: #FFF5EC;
+}
+
+.fa-heart{
+    width: 30px;
+    height: 30px;
+    background-color: #fca350;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.fa-trash{
+    color: #d8b6a3;
+}
+/* ------------------------- */
+
+/* 
+span-heart{
+    color: rgb(212, 86, 7);
+} */
+
+
+
+/* ---------- */
+/* .hum_menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(212, 113, 7);
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+	position: fixed;
+    bottom: 50px;
+    right: 50px;
+} */
+
+.hum_menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(212, 113, 7);
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: auto;
+}
+
+
+
+
+.hum_menu::before{
+	content: "+";
+	/* position: absolute; */
+	/* right: 500px; */
+} 
+
+.hum_menu.active::before{
+	content: "-";
+} 
+
+div.word-container {
+	display: none;
+	/* margin: 0 40px 0 0; */
+}
+
+div.word-container.open {
+	display:block;
+	/* margin: 0 40px 0 0; */
+}
+
+/* -------------------------- */
+
+
+/* 入力フォーム */
+.new-words{
+    margin: 15px 10px 10px 10px;
+    width: 90%;
+}
+
+/* #newwords{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFA572;
+    color: #FFF5EC;
+    text-align: center;
+    margin: 5px;
+} */
+
+/* これはあったほうがいい */
+div .task-container {
+    display: none;
+    margin: 0 40px 0 0;
+}
+/* ハムの中身が見えたり消えたり */
+div.open .task-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 変更② */
+.form{
+    background-color: #ffefe0;
+    border-radius:5%;
+    height: auto;
+    /* box-shadow: 10px 5px 5px red; */
+
+}
+
+#word{
+    background-color: #FFF4EA;
+    border: #a7805c solid 0.5px;
+    border-radius: 5%;
+    padding: 20px;
+}
+/* -------------------------- */
+
+
+#word{
+    background-color: #FFF5EC;
+    border: #a7805c solid 0.5px;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+.word-input-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 374px;
+}
+
+
+.word-btn{
+    height: 50px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* 各word-btnの横幅指定 */
+/* 変更点③ */
+.add{
+    width: 180px;
+    background-color: #fca350;
+    border-color: #fca350;
+    color: #FFF4EA;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.clear{
+    width: 90px;
+    background-color: #FFF4EA;
+    color: #BEB4AA;
+    border-color: #BEB4AA;
+}
+/* ---------------------- */
+
+/* 新しい言葉登録固定 */
+.word-container-fix{
+    background-color:#FFFFFF;
+    position: fixed;
+    top: 20px;
+    left: auto;
+    right: auto;
+    width: 374px;
+    border-radius: 5%;
+}
+
+
+/* 言葉追加ボタン固定 */
+.PlusItem{
+    width: 360px;
+    height: 45px;
+    margin-right: auto;
+}
+
+.Hum{
+    bottom: 20px;
+    width: 95%;
+    position: fixed;
+}
+
+
+/* 変更① */
+.login_btn{
+    background: #D5A271;
+    color: #FFF5EC;
+    border: 1px solid #D5A271;
+    text-align: center;
+    width: 172px;
+    height: 49px;
+    margin: 10px 100px;
+    font-weight: bold;
+}
+/* ---------------- */
+
+/* 中身を中央に置く */
+.container{
+    width: 374px;
+    margin: 0px auto 80px;
+}
+
+/* テキストエリア横幅・中央置き */
+.textarea{
+    width: 374px;
+    max-width: 374px;
+    min-width: 374px;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go For It ～ 頑張れ自分 | お気に入りの言葉を集めよう</title>
+    <!-- リセットCSSのCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <!-- FontAwesomeのCDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- jQweryのCDN -->
+    <script defer src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script defer src="{{ url_for('static', filename='js/common.js') }}"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="Fixed">
+            <a href="/" class="btn app-title">Go For It !</a>
+            <a href="/logout" class="btn btn-secondary">ログアウト</a>
+        </div>
+    </header>
+    <main>
+        <!-- 中身を中央に置く -->
+        <div class="container">        
+            <div class="choice">
+                <a href="/list/regist" class="btn btn-choice chrono">登録順</a>
+                <a href="/list/good" class="btn btn-choice">いいね順</a>
+            </div>
+
+            <h2 class="page-head">{{user_name}}さんが集めた、自分のための言葉</h2>
+
+            <!-- いいね最多表示枠 -->
+            <div class="card-wrap good-top">
+                <div class="card">
+                    <p class="word-date">{{top_good["date"]}}</p>
+                    <p class="word">{{top_good["word"]}}</p>
+                    <div class="icon-wrap">
+                        <div class="heart-wrap">
+                            <a href="/good/{{top_good['id']}}" class="circle"><span-heart><i class="fa-solid fa-heart"></i></span-heart>いいね</a>
+                            <p href="">{{top_good["good"]}}</p>
+                        </div>  
+                        <div>
+                            <a href="/delete/{{top_good['id']}}" class="circle delete-btn"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- いいね最多表示枠 ここまで -->
+
+            <div class="card-wrap">
+            {% for word in word_list %}
+                <div class="card">
+                    <p class="word-date">{{word["date"]}}</p>
+                    <p class="word">{{word["word"]}}</p>
+                    <div class="icon-wrap">
+                        <div class="heart-wrap">
+                            <a href="/good/{{word['id']}}" class="circle"><span-heart><i class="fa-solid fa-heart"></i></span-heart>いいね</a>
+                            <p href="">{{word["good"]}}</p>
+                        </div>  
+                        <div>
+                            <a href="/delete/{{word['id']}}" class="circle delete-btn"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </div>    
+                </div>
+            {% endfor %}
+            </div>
+
+            <div class="new-words container">
+                <!-- <button id="newwords"><i class="fa-solid fa-plus"></i></button> -->
+                <div class="Hum"> 
+                    <div class="PlusItem">
+                        <div class="hum_menu"></div> <!-- 表示切り替えボタンの機能 -->
+                    </div>
+                </div>
+                <div id="word-input">
+                    <div class="word-container word-container-fix">
+                        <form action="/add" method="POST" class="form">
+                            <div class="input-item">
+                                <label for="word"></label>
+                                <div class="textarea">
+                                    <textarea id="word" cols="35" rows="25"  placeholder="ここに文字を入力" name="word" class="textarea"></textarea>
+                                </div>
+                                <!-- <input type="textarea" id="word" name="word"> -->
+                            </div>
+                            <!-- 各word-btnの横幅指定 -->
+                            <div class="word-input-btn">
+                                <input type="submit" value="この言葉を追加する" class="word-btn add">
+                                <input type="button" value="クリア" onclick="clearTextarea()" class="word-btn clear"/>
+                            </div>
+                            <!-- 各word-btnの横幅指定　ここまで -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
