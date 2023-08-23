@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go For It ! ～ 頑張れ自分 | お気に入りの言葉を集めよう</title>
+    <!-- リセットCSSのCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <!-- FontAwesomeのCDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- jQweryのCDN -->
+    <script defer src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script defer src="{{ url_for('static', filename='js/common.js') }}"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="Fixed">
+            <a href="/" class="app-title">Go For It !</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="custom_error_page">
+            <h2 style="text-align: center; font-size: 30px;">お探しのページは見つかりませんでした</h2>
+            <div class="error_page">
+                <a href="/" class="btn return_btn">Homeにアクセス</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

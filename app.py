@@ -248,6 +248,11 @@ def update_record(db_file, query, terms):
     conn.commit()
     c.close()
 
+# カスタム404ページが表示されるようにします。エラーあるかもです。by阿吽
+@app.errorhandler(404)
+def page_not_found(error):
+  return render_template('page_not_found.html'), 404
+
 # スクリプトとして直接実行した場合
 if __name__ == "__main__":
     # FlaskのWEBアプリケーションを起動

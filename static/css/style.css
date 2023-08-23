@@ -60,7 +60,6 @@ input {
     padding:35px 30px 25px;
 }
 
-/* 変更② */
 .input{
     width: 170px;
     height: 40px;
@@ -202,7 +201,6 @@ p.word{
 }
 
 
-/* 変更① */
 span-heart{
     color: #FFF5EC;
 }
@@ -308,7 +306,6 @@ div.open .task-container {
     flex-wrap: wrap;
 }
 
-/* 変更② */
 .form{
     background-color: #ffefe0;
     border-radius:5%;
@@ -348,7 +345,6 @@ div.open .task-container {
 }
 
 /* 各word-btnの横幅指定 */
-/* 変更点③ */
 .add{
     width: 180px;
     background-color: #fca350;
@@ -391,8 +387,6 @@ div.open .task-container {
     position: fixed;
 }
 
-
-/* 変更① */
 .login_btn{
     background: #D5A271;
     color: #FFF5EC;
@@ -418,3 +412,26 @@ div.open .task-container {
     min-width: 374px;
 }
 
+/* 404ページcss */
+.custom_error_page{
+    margin: 90px auto;
+}
+
+.error_page{
+    margin:20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.return_btn{
+    background-color: #fca350;
+    color: #FFF4EA;
+    font-weight: bold;
+    border-radius: 5%;
+    text-align: center;
+    line-height: 170%;
+    font-size: 17px;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+}
